@@ -1,21 +1,20 @@
-const hideGemini = () => {
-    // Methode 1: Der spezifische Gemini-Container
+const hideGemini = () => {    
     document.querySelectorAll('div[data-content-feature="1"]').forEach(el => {
         console.log("[HideGemini] Removing data-content-feature block");
         el.style.display = 'none';
     });
 
     [...document.querySelectorAll("div")]
-  .filter(div =>
-    div.innerText?.toLowerCase().includes("ai overview") &&
-    div.clientHeight < 1000 &&
-    div.querySelectorAll("a").length < 10 &&
-    !div.closest("#rhs") // ➜ RHS = Right Hand Side (Knowledge Panel!)
-  )
-  .forEach(div => {
-    console.log("[HideGemini] Removing main AI block");
-    div.style.display = "none";
-  });
+    .filter(div =>
+        div.innerText?.toLowerCase().includes("ai overview") &&
+        div.clientHeight < 1000 &&
+        div.querySelectorAll("a").length < 10 &&
+        !div.closest("#rhs") // ➜ RHS = Right Hand Side (Knowledge Panel!)
+    )
+    .forEach(div => {
+        console.log("[HideGemini] Removing main AI block");
+        div.style.display = "none";
+    });
 };
 
 // Observer with longer runtime
