@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Fade Out Google Gemini (AI Overview)",
+    "version": "1.0",
+    "description": "Fade out Gemini/AI-block in Google search result pages.",
+    "content_scripts": [
+      {
+        "matches": ["https://www.google.com/search*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "48": "fade-out-gemini.png"
+    }
+  }
