@@ -51,4 +51,4 @@ This extension does **not** collect any personal data or interact with any APIs.
 
 ## License
 
-MIT – do what you want, just don’t pretend you wrote it 😉
+MIT – do what you want!
